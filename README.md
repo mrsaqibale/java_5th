@@ -2,7 +2,7 @@
 ## Week 01
 ### Day 01
 
-1. Hello World [code](https://www.atsix.online/2023/09/hello-world-in-java.html{:target="_blank"})
+1. Hello World ([code](https://www.atsix.online/2023/09/hello-world-in-java.html){:target="_blank"})
 
 2. Data types in Java [code](#)
 
