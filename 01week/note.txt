@@ -8,3 +8,8 @@
 05 if else condition in java
 06 for loop in java
 07 Home task of switch Statement
+
+28-9-2023
+09 enter parameter using cmd line
+10 Scanner Class input in terminal
+11 
