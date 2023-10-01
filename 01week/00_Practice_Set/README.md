@@ -1,10 +1,5 @@
-1. Write a Java program to print 'Slam' on screen and your name on a separate line.
-Expected Output :
-Slam
-Saqib Ale
+01: Sum of 2 int values get from user in Console using Scanner
 
-2. Write a Java program to print the sum of two numbers.
-Test Data:
-74 + 36
-Expected Output :
-110
+02: Sum of 2 int values get from user in Dialog Box
+
+03: Write a java program which print the table of given number and end on given number

@@ -1,3 +1,4 @@
+// Code by saqib ale
 class Main {
     public static void main(String[] argu){
         //set the values
@@ -7,7 +8,7 @@ class Main {
         //add the both number
         int sum = num1 + num2;
 
-        //print the sum using print method
+        //print the sum of num1 and num2
         System.out.print("Sum = " + sum + "\n");
     }
     

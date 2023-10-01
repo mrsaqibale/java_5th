@@ -1,11 +1,24 @@
-// 2. Write a Java program to print the sum of two numbers.
-// Test Data:
-// 20 + 30
-// Expected Output :
-// 50
+// code by Saqib Ale
+// 02: Sum of 2 int type numbers using Dialog (joptions lib)
 
-class Main {
-    public static void main(String[] argu){
-        System.out.println(20+30);
+import javax.swing.JOptionPane;
+class Main{
+    public static void main(String[] args){
+        // Define variables
+        int numb1 ;
+        int numb2 ;
+        int Sum;
+
+        //Get input
+        numb1 = Integer.parseInt(JOptionPane.showInputDialog("Enter first Value: "));
+        numb2 = Integer.parseInt(JOptionPane.showInputDialog("Enter Second Number"));
+
+        //Calculate sum 
+        Sum = numb1 + numb2;
+
+        //display sum 
+        JOptionPane.showMessageDialog(null , "Sum = "+ Sum);
+
+        
     }
 }
