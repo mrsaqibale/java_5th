@@ -1,0 +1,4 @@
+01: day 1 code: java code write HR class and employee class get data of 
+employee name id and pay and print all data with 2 methdos.
+
+
