@@ -1,11 +1,14 @@
 import java.util.Scanner;
-class Employee {
+public class Employee {
     //define all variables 
     int arraySize;
     String[] empName;
     int[] empId;
     int[] empPay;
     Scanner sc = new Scanner(System.in);
+    public Employee(){
+        
+    }
     public Employee(int Size){
         arraySize = Size;
         empName = new String[Size];
@@ -29,7 +32,14 @@ class Employee {
         }
     }
     void displayEmpData(){
-
+        int j =0;
+        for(int i = 0 ; i < arraySize ; i++){
+            j = i;
+            System.out.println("__________Display Employee Data__________");
+            // System.out.println("Index\tId\tName\tPay");
+            System.out.println(j+++"\t"+empId[i]+"\t"+empName[i]+"\t"+empPay[i]);
+   
+        }
     }
     
 }
