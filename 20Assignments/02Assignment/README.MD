@@ -28,7 +28,8 @@ Question No. 6 Why Scanner class is used? Use Scanner class to read student name
 
 # 07
 Question No. 7 Define the following Java concepts
-    a. private, public and protected
-    b. constructor
-    c. JRE, JDK, JVM
-    d. Super keyword
+
+    1. private, public and protected
+    2. constructor
+    3. JRE, JDK, JVM
+    4. Super keyword
