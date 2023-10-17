@@ -1,8 +1,8 @@
 # 01
-Question No. 1 Write a Java program to create a class called "Faculty" with a name and Designation attribute. Create two instances of the "Person" class, set their attributes using the constructor, and print their name and age.
+Question No. 1 Write a Java program to create a class called "Faculty" with a name and Designation attribute. Create two instances of the "Person" class, set their attributes using the constructor, and print their name and designation.
 
 # 02
-Question No. 2 Write a Java program to create a class called "BankAccount" with a collection of accounts and methods to add and remove accounts, and to deposit and withdraw money. Also define a class called "Account" to maintain account details of a particular customer.
+ Write a Java program to create a class called "BankAccount" with a collection of accounts and methods to add and remove accounts and deposit and withdraw money
 
 # 03
 Question No. 3 Take an array of 10 elements. Split it into middle and store the elements in two dfferent arrays. E.g.-
