@@ -8,6 +8,11 @@ import javax.swing.JOptionPane;
  */
 public class jfMainView extends javax.swing.JFrame {
     private boolean[] chkBtnFlag;
+    
+    //code var
+    private int playerNo;
+    
+    
     public jfMainView() {
         initComponents();
         chkBtnFlag =new boolean[9];
@@ -37,7 +42,7 @@ public class jfMainView extends javax.swing.JFrame {
         btnBox7 = new javax.swing.JButton();
         btnBox9 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        lblPlayerNo = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -59,6 +64,48 @@ public class jfMainView extends javax.swing.JFrame {
         btnBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBox1ActionPerformed(evt);
+            }
+        });
+
+        btnBox3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBox3ActionPerformed(evt);
+            }
+        });
+
+        btnBox4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBox4ActionPerformed(evt);
+            }
+        });
+
+        btnBox5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBox5ActionPerformed(evt);
+            }
+        });
+
+        btnBox6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBox6ActionPerformed(evt);
+            }
+        });
+
+        btnBox8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBox8ActionPerformed(evt);
+            }
+        });
+
+        btnBox7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBox7ActionPerformed(evt);
+            }
+        });
+
+        btnBox9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBox9ActionPerformed(evt);
             }
         });
 
@@ -110,9 +157,10 @@ public class jfMainView extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jLabel1.setText("Turn");
+        jLabel1.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
+        jLabel1.setText("Player No:");
 
-        jLabel2.setText("jLabel2");
+        lblPlayerNo.setFont(new java.awt.Font("Liberation Sans", 1, 24)); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -123,9 +171,9 @@ public class jfMainView extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(6, 6, 6)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblPlayerNo, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(95, Short.MAX_VALUE))
         );
@@ -134,11 +182,11 @@ public class jfMainView extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(92, 92, 92))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(lblPlayerNo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 77, Short.MAX_VALUE))
+                .addGap(86, 86, 86))
         );
 
         jMenu1.setText("File");
@@ -202,9 +250,7 @@ public class jfMainView extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 487, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -222,6 +268,17 @@ public class jfMainView extends javax.swing.JFrame {
             return true;
         }
         return false;
+    }
+    
+    //which player have turn 
+    private int whichPlayer(){
+        return playerNo;
+    }
+    
+    //which player play now change lablel
+    private void setPlayerLabel(int val){
+        playerNo = val;
+        lblPlayerNo.setText(val+"");
     }
     
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
@@ -253,10 +310,17 @@ public class jfMainView extends javax.swing.JFrame {
         // TODO add your handling code here:
         //for box 02
         if(isAvailable(2)){
-            btnBox1.setText("X");
+            if(whichPlayer() == 1){
+                btnBox2.setText("X");
+                setPlayerLabel(2);
+            }
+            else{
+                btnBox2.setText("O");
+                setPlayerLabel(1);
+            }
         }
         else{
-            JOptionPane.showMessageDialog(rootPane, "Checked");
+            JOptionPane.showMessageDialog(rootPane, "Already Checked");
         }
     }//GEN-LAST:event_btnBox2ActionPerformed
 
@@ -264,13 +328,145 @@ public class jfMainView extends javax.swing.JFrame {
         // TODO add your handling code here:
         //if press btnBox1
         if(isAvailable(1)){
-            btnBox1.setText("X");
+            if(whichPlayer() == 1){
+                btnBox1.setText("X");
+                setPlayerLabel(2);
+            }
+            else{
+                btnBox1.setText("O");
+                setPlayerLabel(1);
+            }
         }
         else{
-            JOptionPane.showMessageDialog(rootPane, "Checked");
+            JOptionPane.showMessageDialog(rootPane, "Already Checked");
         }
-        
     }//GEN-LAST:event_btnBox1ActionPerformed
+
+    private void btnBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBox3ActionPerformed
+        // TODO add your handling code here:
+        //box 3
+        if(isAvailable(3)){
+            if(whichPlayer() == 1){
+                btnBox3.setText("X");
+                setPlayerLabel(2);
+            }
+            else{
+                btnBox3.setText("O");
+                setPlayerLabel(1);
+            }
+        }
+        else{
+            JOptionPane.showMessageDialog(rootPane, "Already Checked");
+        }
+    }//GEN-LAST:event_btnBox3ActionPerformed
+
+    private void btnBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBox4ActionPerformed
+        // TODO add your handling code here:
+        //box 4
+                if(isAvailable(4)){
+            if(whichPlayer() == 1){
+                btnBox4.setText("X");
+                setPlayerLabel(2);
+            }
+            else{
+                btnBox4.setText("O");
+                setPlayerLabel(1);
+            }
+        }
+        else{
+            JOptionPane.showMessageDialog(rootPane, "Already Checked");
+        }
+    }//GEN-LAST:event_btnBox4ActionPerformed
+
+    private void btnBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBox5ActionPerformed
+        // TODO add your handling code here:
+//        box5
+        if(isAvailable(5)){
+            if(whichPlayer() == 1){
+                btnBox5.setText("X");
+                setPlayerLabel(2);
+            }
+            else{
+                btnBox5.setText("O");
+                setPlayerLabel(1);
+            }
+        }
+        else{
+            JOptionPane.showMessageDialog(rootPane, "Already Checked");
+        }
+    }//GEN-LAST:event_btnBox5ActionPerformed
+
+    private void btnBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBox6ActionPerformed
+        // TODO add your handling code here:
+        //box 6
+        if(isAvailable(6)){
+            if(whichPlayer() == 1){
+                btnBox6.setText("X");
+                setPlayerLabel(2);
+            }
+            else{
+                btnBox6.setText("O");
+                setPlayerLabel(1);
+            }
+        }
+        else{
+            JOptionPane.showMessageDialog(rootPane, "Already Checked");
+        }
+    }//GEN-LAST:event_btnBox6ActionPerformed
+
+    private void btnBox7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBox7ActionPerformed
+        // TODO add your handling code here:
+//        box 7
+        if(isAvailable(7)){
+            if(whichPlayer() == 1){
+                btnBox7.setText("X");
+                setPlayerLabel(2);
+            }
+            else{
+                btnBox7.setText("O");
+                setPlayerLabel(1);
+            }
+        }
+        else{
+            JOptionPane.showMessageDialog(rootPane, "Already Checked");
+        }
+    }//GEN-LAST:event_btnBox7ActionPerformed
+
+    private void btnBox8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBox8ActionPerformed
+        // TODO add your handling code here:
+        //box 8
+                if(isAvailable(8)){
+            if(whichPlayer() == 1){
+                btnBox8.setText("X");
+                setPlayerLabel(2);
+            }
+            else{
+                btnBox8.setText("O");
+                setPlayerLabel(1);
+            }
+        }
+        else{
+            JOptionPane.showMessageDialog(rootPane, "Already Checked");
+        }
+    }//GEN-LAST:event_btnBox8ActionPerformed
+
+    private void btnBox9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBox9ActionPerformed
+        // TODO add your handling code here:
+        //box 9
+                if(isAvailable(9)){
+            if(whichPlayer() == 1){
+                btnBox9.setText("X");
+                setPlayerLabel(2);
+            }
+            else{
+                btnBox9.setText("O");
+                setPlayerLabel(1);
+            }
+        }
+        else{
+            JOptionPane.showMessageDialog(rootPane, "Already Checked");
+        }
+    }//GEN-LAST:event_btnBox9ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -319,7 +515,6 @@ public class jfMainView extends javax.swing.JFrame {
     private javax.swing.JButton btnBox8;
     private javax.swing.JButton btnBox9;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
@@ -330,5 +525,6 @@ public class jfMainView extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel lblPlayerNo;
     // End of variables declaration//GEN-END:variables
 }
