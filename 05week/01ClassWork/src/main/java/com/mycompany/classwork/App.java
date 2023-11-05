@@ -17,8 +17,14 @@ public class App {
         System.out.println("Enter the Array Size");
         arraySize = objSc.nextInt();
         
-        student obj1 = new student(arraySize);
-        obj1.getStudentData();
-        obj1.displayData();
+        
+//        student obj1 = new student(arraySize);
+//        obj1.getStudentData();
+//        obj1.displayData();
+          
+
+          inheritClass obj2 = new inheritClass(arraySize);
+          obj2.getStudentData();
+          obj2.displayData();
     }
 }

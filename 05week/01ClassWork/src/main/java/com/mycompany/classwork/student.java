@@ -17,7 +17,7 @@ public class student {
     Scanner objSc ;
     int arraySize;
     //define the constructuor which get array size
-    
+
     student(int Size){
         this.arraySize = Size;
         studentName = new String[arraySize];
