@@ -18,6 +18,6 @@
 ## week2 [updated soon](#)
 
 ## week3 [Code](https://github.com/mralihx/java_5th/tree/master/03week)
-## week5 [Code] (https://github.com/mralihx/java_5th/tree/master/05week)
+## week5 [Code](https://github.com/mralihx/java_5th/tree/master/05week)
 ## week6 [updated soon] (#)
-## week7 [Code] (https://github.com/mralihx/java_5th/tree/master/07week)
+## week7 [Code](https://github.com/mralihx/java_5th/tree/master/07week)
