@@ -41,11 +41,11 @@
 
 ## Mid Term <a name="mid_term"></a>
 
-- [x] [Basic](mbasic)
+- [x] [Basic](#mbasic)
 
-- [x] [Difference](mdiffer)
+- [x] [Difference](#mdiffer)
 
-- [x] DIFFERENCES
+- [x] [OOP](#moop)
 
 ### Basic <a name="mbasic"></a>
 
@@ -69,15 +69,71 @@
 
 ### Difference <a name="mdiffer"></a>
 
-#### Differance bw Java & C++
+#### Differance b/w Java & C++
 
-| Feature                     | Java                                  | C++                                      |
-|-----------------------------|---------------------------------------|-------------------------------------------|
-| **Platform Independence**   | Platform-independent (JVM)            | Platform-dependent compilation            |
-| **Memory Management**       | Automatic garbage collection         | Manual memory management (new, delete)     |
-| **Language Paradigm**       | Object-oriented                      | Supports both procedural and OOP           |
-| **Multiple Inheritance**    | Through interfaces                   | Supports multiple inheritance directly    |
-| **Compiler vs. Interpreter**| Compiled to bytecode, executed by JVM | Compiled directly to machine code          |
+| Java                          | C++                               |
+|-------------------------------|-----------------------------------|
+| Platform Independence         | Platform-Dependent Compilation    |
+| Automatic Memory Management   | Manual Memory Management         |
+| Object-Oriented               | Procedural and Object-Oriented    |
+| Multiple Inheritance (via interfaces) | Multiple Inheritance Directly  |
+| Compiled to Bytecode (JVM)    | Compiled Directly to Machine Code |
+
+### JVM & JDK & JRE
+
+| **Aspect**                        | **JVM (Java Virtual Machine)** | **JDK (Java Development Kit)** | **JRE (Java Runtime Environment)** |
+|-----------------------------------|-------------------------------|-------------------------------|-------------------------------------|
+| **Functionality**                 | Executes Java bytecode        | Full development kit with tools | Runtime environment for Java apps   |
+| **Components**                    | Virtual Machine              | Compiler, JRE, Development Tools | JVM, Class Libraries                |
+| **Purpose**                       | Provides runtime environment | Comprehensive development kit   | Minimum requirements for runtime    |
+| **Key Role**                      | Translates bytecode, memory management | Compilation, development, debugging | Executes bytecode, provides libraries |
+| **Usage**                         | Installed on host machine    | Used by developers for Java development | End-users need it to run Java apps  |
+
+### OOP Concepts <a name="moop"></a>
+
+#### Classes and Objects in Java
+##### Class
+A class in Java is a blueprint or template for creating objects. It serves as a prototype that defines the attributes (fields) and behaviors (methods) that objects instantiated from the class will possess.
+
+In Java, a class is defined using the `class` keyword, followed by the class name. Here is an example of a `Student` class:
+
+```java
+public class Student {
+    // Attributes of the Student
+    String name;
+    int age;
+    String studentAridNo;
+    // Behaviors
+    void study() {
+        // Implementation
+    }
+    void attendClass() {
+        // Implementation
+    }
+}
+```
+
+In the example above, the `Student` class has attributes (`name`, `age`, and `studentAridNo`) that represent properties of a student, and it has behaviors (`study` and `attendClass`) that represent actions a student can perform.
+
+##### Object
+
+An object is an instance of a class. It is a concrete realization of the blueprint defined by the class. Objects have state (values for attributes) and behavior (execution of methods).
+
+Objects are created from a class using the `new` keyword. For example, creating an instance of the `Student` class:
+
+```java
+Student myStudent = new Student();
+myStudent.name = "John Doe";
+myStudent.age = 20;
+myStudent.studentAridNo = "S12345";
+myStudent.study();
+```
+
+In this example, `myStudent` is an object of the `Student` class. It has specific values for the attributes `name`, `age`, and `studentId`, and it can invoke the methods `study` and `attendClass` defined in the `Student` class.
+
+
+
+
 
 
 
