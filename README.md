@@ -1,4 +1,5 @@
 # Java code links class to class
+# [FIRST 8 WEEKS (MID TERM)](#mid_term)
 ## Week 01 [Code](https://github.com/mralihx/java_5th/tree/master/01week)
 ### Day 01
 
@@ -21,3 +22,5 @@
 ## week5 [Code](https://github.com/mralihx/java_5th/tree/master/05week)
 ## week6 [updated soon] (#)
 ## week7 [Code](https://github.com/mralihx/java_5th/tree/master/07week)
+
+## Mid Term <a name="mid_term"></a>
