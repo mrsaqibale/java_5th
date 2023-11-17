@@ -41,15 +41,33 @@
 
 ## Mid Term <a name="mid_term"></a>
 
+### Topics
 - [x] [Basic](#mbasic)
+    - Created 
+    - ByteCode
+    - Characteristics
 
 - [x] [Difference](#mdiffer)
+    - Java & C++
+    - JVM & JDK & JRE
 
 - [x] [OOP](#moop)
-
+    - [Classes and Objects](#moop1)
+        1. Classes
+        2. Objects
+    - [Encapulation](#moop2)
+    - [Access Modifiers](#moop3)
+    - [Inheritance](#moop4)
+        1. Super Keyword
+    - [Abstraction](#moop5)
+        3. [Interface](#moop51)
+        2. [Implements keyword](#moop52)
+        1. [Extend Keyword](#moop53)
+        4. [Multiple](#moop54)
+        5. [Code](#absCode)
 ### Basic <a name="mbasic"></a>
 
->#### Create
+>#### Created
 >Java was created by James Gosling, Mike Sheridan, and Patrick Naughton at Sun Microsystems in 1991.  Java was officially released by Sun Microsystems in 1995.
 
 >#### ByteCode
@@ -87,17 +105,23 @@
 | **Components**                    | Virtual Machine              | Compiler, JRE, Development Tools | JVM, Class Libraries                |
 | **Purpose**                       | Provides runtime environment | Comprehensive development kit   | Minimum requirements for runtime    |
 | **Key Role**                      | Translates bytecode, memory management | Compilation, development, debugging | Executes bytecode, provides libraries |
-| **Usage**                         | Installed on host machine    | Used by developers for Java development | End-users need it to run Java apps  |
+| *Inheritance*Usage**                         | Installed on host machine    | Used by developers for Java development | End-users need it to run Java apps  |
 
-### OOP Concepts <a name="moop"></a>
+---
+
+## OOP Concepts <a name="moop"></a>
 
 - [Classes and Objects](#moop1)
 - [Encapulation](#moop2)
 - [Access Modifiers](#moop3)
 - [Inheritance](#moop4)
-#### Classes and Objects <a name="moop1"></a>
+- [Abstraction](#moop5)
 
-##### Class
+
+---
+### Classes and Objects <a name="moop1"></a>
+
+#### Class <a name="moop11"></a>
 A class in Java is a blueprint or template for creating objects. It serves as a prototype that defines the attributes (fields) and behaviors (methods) that objects instantiated from the class will possess.
 
 In Java, a class is defined using the `class` keyword, followed by the class name. Here is an example of a `Student` class:
@@ -120,7 +144,7 @@ public class Student {
 
 In the example above, the `Student` class has attributes (`name`, `age`, and `studentAridNo`) that represent properties of a student, and it has behaviors (`study` and `attendClass`) that represent actions a student can perform.
 
-##### Object
+#### Object <a name="moop12"></a>
 
 An object is an instance of a class. It is a concrete realization of the blueprint defined by the class. Objects have state (values for attributes) and behavior (execution of methods).
 
@@ -136,7 +160,8 @@ myStudent.study();
 
 In this example, `myStudent` is an object of the `Student` class. It has specific values for the attributes `name`, `age`, and `studentId`, and it can invoke the methods `study` and `attendClass` defined in the `Student` class.
 
-#### Encapsulation  <a name="moop2"></a>
+---
+### Encapsulation  <a name="moop2"></a>
 Encapsulation in Java is a fundamental object-oriented programming concept that involves bundling the data (attributes) and methods (behaviors) that operate on the data within a single unit, known as a class. ***The primary goal of encapsulation is to restrict direct access to some of an object's components, promoting data hiding, and enhancing security and maintainability.***
 
 In Java, encapsulation is often achieved by using [**access modifiers**](#mamodi)
@@ -192,9 +217,9 @@ In this example:
 - The `name`, `age`, and `studentId` attributes are marked as private, making them accessible only within the `Student` class.
 - Public methods (`getName`, `setName`, `getAge`, `setAge`, `getStudentId`, `setStudentId`, `study`, `attendClass`) are provided to access and modify the private attributes. These methods can include additional logic or validation if needed.
 
-- Fundamental oop concept 
 
-#### Access Modifiers  <a name="moop3"></a>
+--
+### Access Modifiers  <a name="moop3"></a>
 
 Access modifiers in Java control the visibility of classes, methods, and fields:
 
@@ -211,7 +236,8 @@ Access modifiers in Java control the visibility of classes, methods, and fields:
 | **Protected**   | Yes   | No        | No     |
 | **Default**     | Yes   | No        | No     |
 
-#### Inheritance <a name="moop4"></a>
+---
+### Inheritance <a name="moop4"></a>
 
 **Inheritance in Java is a mechanism where a class (subclass or derived class) inherits properties and behaviors from another class (superclass or base class).**
 
@@ -244,7 +270,7 @@ public class Student extends Person {
 
 In this example, the `Student` class inherits the attributes (`name` and `age`) and behavior (`displayDetails()`) from the `Person` class. It also introduces its own attribute (`studentId`) and behavior (`study()`).
 
-##### `super` Keyword <a name="moop41"></a>
+#### `super` Keyword <a name="moop41"></a>
 
 The `super` keyword in Java is used to refer to the immediate parent class. **It can be used to access the fields, methods, and constructors of the superclass.**
 
@@ -268,6 +294,7 @@ public class Student extends Person {
 In the `Student` class, `super.displayDetails()` is used to invoke the `displayDetails()` method of the superclass (`Person`).
 
 
+---
 ### Abstraction <a name="moop5"></a>
 **Abstraction in Java is the process of hiding the implementation details** and showing only the essential features of an object. It allows the creation of abstract classes and interfaces. [code](#absCode)
 #### Interface <a name="moop51"></a>
@@ -375,6 +402,8 @@ public class Main {
         customer1.provideLoan();
     }
 }
+
+---
 
 
 
