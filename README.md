@@ -5,6 +5,7 @@
  ![Visitor Count](https://profile-counter.glitch.me/mralihx/count.svg)
 
 </div>
+
 # [FIRST 8 WEEKS (MID TERM)](#mid_term)
 ## Week 01 [Code](https://github.com/mralihx/java_5th/tree/master/01week)
 ### Day 01
@@ -25,17 +26,25 @@
 ## week2 [updated soon](#)
 
 ## week3 [Code](https://github.com/mralihx/java_5th/tree/master/03week)
+
 ## week5 [Code](https://github.com/mralihx/java_5th/tree/master/05week)
+
 ## week6 [updated soon] (#)
+
 ## week7 [Code](https://github.com/mralihx/java_5th/tree/master/07week)
 
 <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+
 <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+
 <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+
 ## Mid Term <a name="mid_term"></a>
 
 - [x] [Basic](mbasic)
+
 - [x] [Difference](mdiffer)
+
 - [x] DIFFERENCES
 
 ### Basic <a name="mbasic"></a>
@@ -61,6 +70,7 @@
 ### Difference <a name="mdiffer"></a>
 
 #### Differance bw Java & C++
+
 | Feature                     | Java                                  | C++                                      |
 |-----------------------------|---------------------------------------|-------------------------------------------|
 | **Platform Independence**   | Platform-independent (JVM)            | Platform-dependent compilation            |
