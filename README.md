@@ -91,7 +91,12 @@
 
 ### OOP Concepts <a name="moop"></a>
 
-#### Classes and Objects in Java
+- [Classes and Objects](#moop1)
+- [Encapulation](#moop2)
+- [Access Modifiers](#moop3)
+- [Inheritance](#moop4)
+#### Classes and Objects <a name="moop1"></a>
+
 ##### Class
 A class in Java is a blueprint or template for creating objects. It serves as a prototype that defines the attributes (fields) and behaviors (methods) that objects instantiated from the class will possess.
 
@@ -131,7 +136,245 @@ myStudent.study();
 
 In this example, `myStudent` is an object of the `Student` class. It has specific values for the attributes `name`, `age`, and `studentId`, and it can invoke the methods `study` and `attendClass` defined in the `Student` class.
 
+#### Encapsulation  <a name="moop2"></a>
+Encapsulation in Java is a fundamental object-oriented programming concept that involves bundling the data (attributes) and methods (behaviors) that operate on the data within a single unit, known as a class. ***The primary goal of encapsulation is to restrict direct access to some of an object's components, promoting data hiding, and enhancing security and maintainability.***
 
+In Java, encapsulation is often achieved by using [**access modifiers**](#mamodi)
+**Example** Consider the following `Student` class as an example of encapsulation:
+
+```java
+public class Student {
+    // Private attributes
+    private String name;
+    private int age;
+    private String studentId;
+
+    // Public methods for accessing and modifying private attributes
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String newName) {
+        name = newName;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int newAge) {
+        // Validate age if needed
+        age = newAge;
+    }
+
+    public String getStudentId() {
+        return studentId;
+    }
+
+    public void setStudentId(String newStudentId) {
+        // Validate student ID if needed
+        studentId = newStudentId;
+    }
+
+    // Other public methods
+    public void study() {
+        // Implementation
+    }
+
+    public void attendClass() {
+        // Implementation
+    }
+}
+```
+
+In this example:
+
+- The `name`, `age`, and `studentId` attributes are marked as private, making them accessible only within the `Student` class.
+- Public methods (`getName`, `setName`, `getAge`, `setAge`, `getStudentId`, `setStudentId`, `study`, `attendClass`) are provided to access and modify the private attributes. These methods can include additional logic or validation if needed.
+
+- Fundamental oop concept 
+
+#### Access Modifiers  <a name="moop3"></a>
+
+Access modifiers in Java control the visibility of classes, methods, and fields:
+
+- **Public:** Accessible from any class or package.
+- **Private:** Accessible only within the same class.
+- **Protected:** Accessible within the same package or by subclasses.
+- **Default (Package-Private):** Accessible within the same package but not from outside.
+
+
+| Access Modifier | Class | Interface | Public |
+|-----------------|-------|-----------|--------|
+| **Public**      | Yes   | Yes       | Yes    |
+| **Private**     | Yes   | No        | No     |
+| **Protected**   | Yes   | No        | No     |
+| **Default**     | Yes   | No        | No     |
+
+#### Inheritance <a name="moop4"></a>
+
+**Inheritance in Java is a mechanism where a class (subclass or derived class) inherits properties and behaviors from another class (superclass or base class).**
+
+***Example*** Consider the following `Person` class and its subclass `Student`:
+
+```java
+public class Person {
+    String name;
+    int age;
+
+    void displayDetails() {
+        System.out.println("Name: " + name + ", Age: " + age);
+    }
+}
+
+public class Student extends Person {
+    String studentId;
+
+    void study() {
+        System.out.println("Studying...");
+    }
+
+    // Overriding method from 
+    void displayDetails() {
+        super.displayDetails(); // Invoking superclass method
+        System.out.println("Student ID: " + studentId);
+    }
+}
+```
+
+In this example, the `Student` class inherits the attributes (`name` and `age`) and behavior (`displayDetails()`) from the `Person` class. It also introduces its own attribute (`studentId`) and behavior (`study()`).
+
+##### `super` Keyword <a name="moop41"></a>
+
+The `super` keyword in Java is used to refer to the immediate parent class. **It can be used to access the fields, methods, and constructors of the superclass.**
+
+```java
+public class Student extends Person {
+    String studentId;
+
+    // Overriding method from 
+    void displayDetails() {
+        super.displayDetails(); // Invoking superclass method
+        System.out.println("Student ID: " + studentId);
+    }
+
+    void study() {
+        System.out.println("Studying...");
+        super.displayDetails(); // Invoking superclass method within subclass
+    }
+}
+```
+
+In the `Student` class, `super.displayDetails()` is used to invoke the `displayDetails()` method of the superclass (`Person`).
+
+
+### Abstraction <a name="moop5"></a>
+**Abstraction in Java is the process of hiding the implementation details** and showing only the essential features of an object. It allows the creation of abstract classes and interfaces. [code](#absCode)
+#### Interface <a name="moop51"></a>
+**An interface in Java is a collection of abstract methods.**  Interfaces provide a way to achieve abstraction and support multiple inheritance.[code](#absCode)
+#### Implementation <a name="moop52"></a>
+*Implementation in Java refers to the process of providing concrete code for the abstract methods defined in an interface or an abstract class.* [code](#absCode)
+#### Extend Concept <a name="moop53"></a>
+*The `extends` keyword is used to establish an inheritance relationship. It allows a class to inherit attributes and behaviors from another class.* [code](#absCode)
+#### Multiple Inheritance <a name="moop54"></a>
+
+**Multiple inheritance in Java refers to a class or interface inheriting from more than one class or interface.** Java supports multiple inheritance through interfaces, where a class can implement multiple interfaces, achieving a form of multiple inheritance. [code](#absCode)
+
+##### Abstract Class <a name="absCode"></a>
+```java
+abstract class Bank {
+    String bankName;
+
+    Bank(String name) {
+        this.bankName = name;
+    }
+
+    abstract void displayDetails(); // Abstract method
+}
+```
+
+##### 2. Class - BankAccounts extending Bank
+
+
+```java
+class BankAccounts extends Bank {
+    BankAccounts(String name) {
+        super(name);
+    }
+
+    @Override
+    void displayDetails() {
+        System.out.println("Bank Name: " + bankName);
+        System.out.println("Type: Savings and Current Accounts");
+    }
+}
+```
+
+##### 3. Interface
+
+```java
+interface Loan {
+    void provideLoan(); // Abstract method in the interface
+}
+```
+
+##### 4. Implementation - LoanImplementation implementing Loan
+
+```java
+class LoanImplementation implements Loan {
+    @Override
+    public void provideLoan() {
+        System.out.println("Loan provided successfully.");
+    }
+}
+```
+
+##### 5. Multiple Inheritance - Using BankAccounts and LoanImplementation
+
+```java
+class Customer extends BankAccounts implements Loan {
+    Customer(String bankName) {
+        super(bankName);
+    }
+
+    // Implementing the abstract method from the Bank class
+    @Override
+    void displayDetails() {
+        super.displayDetails();
+        System.out.println("Customer Information: Regular Account Holder");
+    }
+
+    // Implementing the method from the Loan interface
+    @Override
+    public void provideLoan() {
+        System.out.println("Customer eligible for a loan.");
+    }
+}
+```
+
+##### Example Usage
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        // Example of abstraction and class
+        BankAccounts myBank = new BankAccounts("XYZ Bank");
+        myBank.displayDetails();
+
+        System.out.println("---------------");
+
+        // Example of interface and implementation
+        LoanImplementation loanProvider = new LoanImplementation();
+        loanProvider.provideLoan();
+
+        System.out.println("---------------");
+
+        // Example of multiple inheritance
+        Customer customer1 = new Customer("ABC Bank");
+        customer1.displayDetails();
+        customer1.provideLoan();
+    }
+}
 
 
 
