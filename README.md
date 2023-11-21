@@ -63,7 +63,7 @@
     - [Access Modifiers](#moop3)
     - [Inheritance](#moop4)
 
-        1. Super Keyword
+        1. [Super Keyword](#moop41)
 
     - [Abstraction](#moop5)
 
@@ -72,6 +72,30 @@
         3. [Extend Keyword](#moop53)
         4. [Multiple](#moop54)
         5. [Code](#absCode)
+
+- [x] [File Handling Methods](#file)
+    - [File](#file1)
+        1. [createNewFile()](#file17)
+        2. [delete()](#file11)
+        3. [exists()](#file12)
+        4. [getTotalSpace()](#file13)
+        5. [getAbsolutePath()](#file14)
+        6. [getAbsoluteFile()](#file15)
+        7. [length()](#file16)
+    - [FileWriter](#file2)
+        1. [Appedn file](#file21)
+        2. [write()](#file22)
+        3. [close()](#file23)
+    - [FileReader](#file3)
+        1. [read()](#file31)
+
+    - [BufferedReader (myFav for writing)](#file4)
+        1. [write()](#file41)
+        2. [close()](#file42)
+    - [BufferedWriter (myFav for reading)](#file5)
+        1. [readLine()](#file51)
+        2. [close()](#file52)
+
 ### Basic <a name="mbasic"></a>
 
 >#### Created <a name="mbasic1"></a>
@@ -411,7 +435,78 @@ public class Main {
 }
 ```
 ---
+---
+---
 
+## File Handling <a name="file"></a>
+
+### File <a name="file1"></a>
+it is use to handle the file 
+```java
+File file = new File("FileName.txt");
+```
+---
+#### createNewFile() <a name="file17"></a>
+It create a new file.
+```java
+File file = new File("FileName.txt");
+try{
+    file.createNewFile();
+}catch(IOException e){
+    //Error which you want to print
+}
+```
+---
+#### delete() <a name="file11"></a>
+It is used to delete the file.
+```java
+File file = new File("FileName.txt");
+try{
+    file.delete();
+}catch(IOException e){
+    //Error which you want to print
+}
+```
+---
+#### exists() <a name="file12"></a>
+It return boolean type value .
+```java
+File file = new File("FileName.txt");
+if(file.exists()){
+    //code
+}else{
+    //code
+}
+```
+---
+#### getTotalSpace() <a name="file13"></a>
+It return the space of our file in bytes if you want to convert it in kb then divide it with 1024 .
+```java
+File file = new File("FileName.txt");
+long size = file.getTotalSpace();
+//now it return size of file in bytes
+```
+---
+#### getAbsolutePath() <a name="file14"></a>
+It return the path of the our file .
+```java
+File file = new File("FileName.txt");
+String PathofFile = file.getAbsolutePath();
+```
+---
+#### getAbsoluteFile() <a name="file15"></a>
+Returns the absolute form of this abstract pathname..
+```java
+File file = new File("FileName.txt");
+String filePath = file.getAbsoluteFile();
+```
+---
+#### getAbsoluteFile() <a name="file16"></a>
+Returns the length of file in 'long' type.
+```java
+File file = new File("FileName.txt");
+long fileLength = file.length();
+```
 
 
 
