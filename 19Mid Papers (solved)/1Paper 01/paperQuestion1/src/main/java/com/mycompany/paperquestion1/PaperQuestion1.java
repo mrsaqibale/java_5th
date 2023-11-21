@@ -6,6 +6,8 @@ package com.mycompany.paperquestion1;
 
 import java.io.*;
 import java.nio.file.FileAlreadyExistsException;
+import java.util.Scanner;
+
 
 /**
  *
@@ -35,7 +37,10 @@ public class PaperQuestion1 {
         try{
             BufferedWriter bw = new BufferedWriter(new FileWriter(fileName,true));
             //here get input from user using scanner class
-            bw.write("this is our first file no 2");
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter any String");
+            String input = sc.nextLine();
+            bw.write(input );
             bw.close();
         }catch(IOException e){
             e.printStackTrace();
@@ -52,10 +57,11 @@ public class PaperQuestion1 {
                 String[] array = line.split("\\S+");
                 totalWords += array.length;
                 
+                
             }
-            
+            br.close();
         }catch(IOException e){
-            
+            e.printStackTrace();
         }
         System.out.println(totalLines);
         System.out.println(totalWords);

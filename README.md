@@ -507,8 +507,140 @@ Returns the length of file in 'long' type.
 File file = new File("FileName.txt");
 long fileLength = file.length();
 ```
+---
+---
 
+### FileWriter <a name="file2"></a>
+`The object of FileWriter is used to write the file`.
 
+#### Appedn File <a name="file21"></a>
+This method is used to append the file.
+```java
+FileWriter fw = new FileWriter("FileName.txt", true);
+//This true keyword is use to append the file
+```
+---
+#### write() <a name="file22"></a>
+This is use to write the file.
+```java
+ try {
+        FileWriter fw = new FileWriter("fileName.txt", true);
+        //get value from user
+        Scanner scanner = new Scanner(System.in);
+        String str = scanner.nextLine();
+        fw.write(" " + str);
+        fw.close();
+    } catch (IOException e) {
+            //exception handling
+            e.printStackTrace();
+        }
+```
+---
+#### close() <a name="file23"></a>
+It is used to close the file
+```java
+ try {
+        FileWriter fw = new FileWriter("fileName.txt", true);
+        //get value from user
+        Scanner scanner = new Scanner(System.in);
+        String str = scanner.nextLine();
+        fw.write(" " + str);
+        //close is used to close the file
+        fw.close();
+    } catch (IOException e) {
+            //exception handling
+            e.printStackTrace();
+        }
+```
+---
+---
+### FileReader <a name="file3"></a>
 
+#### read() <a name="file31"></a>
+It is used to read the file
+```java
+try {
+        FileReader fr = new FileReader("text.txt");
+        Scanner sc = new Scanner(fr);
+        while (sc.hasNextLine()) {
+            String line = sc.nextLine();
+            System.out.println(line);
+        }
+        sc.close();
+    } catch (IOException e) {
+            e.printStackTrace();
+        }
+```
+---
+---
+
+### BufferedReader <a name="file4"></a>
+#### readLine() <a name="file41"></a>
+This method is same like other read() method.
+it read file line by line.
+```java
+    try{
+        BufferedReader br = new BufferedReader(new FileReader("FileName.txt" , true));
+        String line;
+        while((line = br.readLine()) != null){
+            System.out.println(line); 
+        }
+         br.close();   
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+``` 
+---
+#### close() <a name="file41"></a>
+Close the file.
+```java
+    try{
+        BufferedReader br = new BufferedReader(new FileReader("FileName.txt" , true));
+        String line;
+        while((line = br.readLine()) != null){
+            System.out.println(line); 
+        }
+        //this is used to close the file best practice
+         br.close();   
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+``` 
+---
+---
+
+### BufferedWriter <a name="file5"></a>
+#### write() <a name="file41"></a>
+This method is used to write the file.
+```java
+    try{
+        BufferedWriter bw = new BufferedWriter(new FileWriter(fileName,true));
+        //here get input from user using scanner class
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter any String");
+        String input = sc.nextLine();
+        bw.write(input );
+        bw.close();
+    }catch(IOException e){
+        e.printStackTrace();
+    }
+``` 
+---
+#### close() <a name="file41"></a>
+Close the file.
+```java
+    try{
+        BufferedWriter bw = new BufferedWriter(new FileWriter(fileName,true));
+        //here get input from user using scanner class
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter any String");
+        String input = sc.nextLine();
+        bw.write(input );
+        //this method is used to close the file
+        bw.close();
+    }catch(IOException e){
+        e.printStackTrace();
+    }
+``` 
 
 
