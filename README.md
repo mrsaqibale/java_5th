@@ -610,7 +610,7 @@ Close the file.
 ---
 
 ### BufferedWriter <a name="file5"></a>
-#### write() <a name="file41"></a>
+#### write() <a name="file51"></a>
 This method is used to write the file.
 ```java
     try{
@@ -626,7 +626,7 @@ This method is used to write the file.
     }
 ``` 
 ---
-#### close() <a name="file41"></a>
+#### close() <a name="file52"></a>
 Close the file.
 ```java
     try{
